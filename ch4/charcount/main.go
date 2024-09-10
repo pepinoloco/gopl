@@ -2,7 +2,6 @@
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 // See page 97.
-//!+
 
 // Charcount computes counts of Unicode characters.
 package main
@@ -53,4 +52,3 @@ func main() {
 	}
 }
 
-//!-

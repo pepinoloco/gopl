@@ -2,7 +2,6 @@
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 // See page 20.
-//!+
 
 // Server2 is a minimal "echo" and counter server.
 package main
@@ -38,4 +37,3 @@ func counter(w http.ResponseWriter, r *http.Request) {
 	mu.Unlock()
 }
 
-//!-

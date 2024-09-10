@@ -24,7 +24,6 @@ func TestConcurrent(t *testing.T) {
 }
 
 /*
-//!+output
 $ go test -v gopl/ch9/memo1
 === RUN   Test
 https://golang.org, 175.026418ms, 7537 bytes
@@ -39,11 +38,9 @@ http://gopl, 326ns, 2856 bytes
 --- PASS: Test (1.21s)
 PASS
 ok  gopl/ch9/memo1	1.257s
-//!-output
 */
 
 /*
-//!+race
 $ go test -run=TestConcurrent -race -v gopl/ch9/memo1
 === RUN   TestConcurrent
 ...
@@ -63,5 +60,4 @@ Previous write by goroutine 35:
 ...
 Found 1 data race(s)
 FAIL	gopl/ch9/memo1	2.393s
-//!-race
 */

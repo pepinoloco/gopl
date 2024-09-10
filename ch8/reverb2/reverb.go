@@ -23,7 +23,6 @@ func echo(c net.Conn, shout string, delay time.Duration) {
 	fmt.Fprintln(c, "\t", strings.ToLower(shout))
 }
 
-//!+
 func handleConn(c net.Conn) {
 	input := bufio.NewScanner(c)
 	for input.Scan() {
@@ -33,7 +32,6 @@ func handleConn(c net.Conn) {
 	c.Close()
 }
 
-//!-
 
 func main() {
 	l, err := net.Listen("tcp", "localhost:8000")

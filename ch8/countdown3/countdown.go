@@ -15,12 +15,10 @@ import (
 	"time"
 )
 
-//!+
 
 func main() {
 	// ...create abort channel...
 
-	//!-
 
 	abort := make(chan struct{})
 	go func() {
@@ -28,7 +26,6 @@ func main() {
 		abort <- struct{}{}
 	}()
 
-	//!+
 	fmt.Println("Commencing countdown.  Press return to abort.")
 	tick := time.Tick(1 * time.Second)
 	for countdown := 10; countdown > 0; countdown-- {
@@ -44,7 +41,6 @@ func main() {
 	launch()
 }
 
-//!-
 
 func launch() {
 	fmt.Println("Lift off!")

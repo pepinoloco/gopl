@@ -15,7 +15,6 @@ import (
 	"gopl/ch4/github"
 )
 
-//!+template
 const templ = `{{.TotalCount}} issues:
 {{range .Items}}----------------------------------------
 Number: {{.Number}}
@@ -24,16 +23,12 @@ Title:  {{.Title | printf "%.64s"}}
 Age:    {{.CreatedAt | daysAgo}} days
 {{end}}`
 
-//!-template
 
-//!+daysAgo
 func daysAgo(t time.Time) int {
 	return int(time.Since(t).Hours() / 24)
 }
 
-//!-daysAgo
 
-//!+exec
 var report = template.Must(template.New("issuelist").
 	Funcs(template.FuncMap{"daysAgo": daysAgo}).
 	Parse(templ))
@@ -48,17 +43,14 @@ func main() {
 	}
 }
 
-//!-exec
 
 func noMust() {
-	//!+parse
 	report, err := template.New("report").
 		Funcs(template.FuncMap{"daysAgo": daysAgo}).
 		Parse(templ)
 	if err != nil {
 		log.Fatal(err)
 	}
-	//!-parse
 	result, err := github.SearchIssues(os.Args[1:])
 	if err != nil {
 		log.Fatal(err)
@@ -69,7 +61,6 @@ func noMust() {
 }
 
 /*
-//!+output
 $ go build gopl/ch4/issuesreport
 $ ./issuesreport repo:golang/go is:open json decoder
 13 issues:
@@ -85,5 +76,4 @@ Title:  encoding/json: provide tokenizer
 Age:    695 days
 ----------------------------------------
 ...
-//!-output
 */

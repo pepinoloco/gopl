@@ -12,7 +12,6 @@ import (
 	"net/http"
 )
 
-//!+
 
 import "gopl/ch12/params"
 
@@ -33,7 +32,6 @@ func search(resp http.ResponseWriter, req *http.Request) {
 	fmt.Fprintf(resp, "Search: %+v\n", data)
 }
 
-//!-
 
 func main() {
 	http.HandleFunc("/search", search)
@@ -41,7 +39,6 @@ func main() {
 }
 
 /*
-//!+output
 $ go build gopl/ch12/search
 $ ./search &
 $ ./fetch 'http://localhost:12345/search'
@@ -56,5 +53,4 @@ $ ./fetch 'http://localhost:12345/search?q=hello&x=123'
 x: strconv.ParseBool: parsing "123": invalid syntax
 $ ./fetch 'http://localhost:12345/search?q=hello&max=lots'
 max: strconv.ParseInt: parsing "lots": invalid syntax
-//!-output
 */

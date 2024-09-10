@@ -11,7 +11,6 @@ import (
 	"unsafe"
 )
 
-//!+
 func equal(x, y reflect.Value, seen map[comparison]bool) bool {
 	if !x.IsValid() || !y.IsValid() {
 		return x.IsValid() == y.IsValid()
@@ -22,8 +21,6 @@ func equal(x, y reflect.Value, seen map[comparison]bool) bool {
 
 	// ...cycle check omitted (shown later)...
 
-	//!-
-	//!+cyclecheck
 	// cycle check
 	if x.CanAddr() && y.CanAddr() {
 		xptr := unsafe.Pointer(x.UnsafeAddr())
@@ -37,8 +34,6 @@ func equal(x, y reflect.Value, seen map[comparison]bool) bool {
 		}
 		seen[c] = true
 	}
-	//!-cyclecheck
-	//!+
 	switch x.Kind() {
 	case reflect.Bool:
 		return x.Bool() == y.Bool()
@@ -48,7 +43,6 @@ func equal(x, y reflect.Value, seen map[comparison]bool) bool {
 
 	// ...numeric cases omitted for brevity...
 
-	//!-
 	case reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32,
 		reflect.Int64:
 		return x.Int() == y.Int()
@@ -62,7 +56,6 @@ func equal(x, y reflect.Value, seen map[comparison]bool) bool {
 
 	case reflect.Complex64, reflect.Complex128:
 		return x.Complex() == y.Complex()
-	//!+
 	case reflect.Chan, reflect.UnsafePointer, reflect.Func:
 		return x.Pointer() == y.Pointer()
 
@@ -81,7 +74,6 @@ func equal(x, y reflect.Value, seen map[comparison]bool) bool {
 		return true
 
 	// ...struct and map cases omitted for brevity...
-	//!-
 	case reflect.Struct:
 		for i, n := 0, x.NumField(); i < n; i++ {
 			if !equal(x.Field(i), y.Field(i), seen) {
@@ -100,20 +92,15 @@ func equal(x, y reflect.Value, seen map[comparison]bool) bool {
 			}
 		}
 		return true
-		//!+
 	}
 	panic("unreachable")
 }
 
-//!-
 
-//!+comparison
 // Equal reports whether x and y are deeply equal.
-//!-comparison
 //
 // Map keys are always compared with ==, not deeply.
 // (This matters for keys containing pointers or interfaces.)
-//!+comparison
 func Equal(x, y interface{}) bool {
 	seen := make(map[comparison]bool)
 	return equal(reflect.ValueOf(x), reflect.ValueOf(y), seen)
@@ -124,4 +111,3 @@ type comparison struct {
 	t    reflect.Type
 }
 
-//!-comparison

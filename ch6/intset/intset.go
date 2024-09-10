@@ -11,7 +11,6 @@ import (
 	"fmt"
 )
 
-//!+intset
 
 // An IntSet is a set of small non-negative integers.
 // Its zero value represents the empty set.
@@ -45,9 +44,7 @@ func (s *IntSet) UnionWith(t *IntSet) {
 	}
 }
 
-//!-intset
 
-//!+string
 
 // String returns the set as a string of the form "{1 2 3}".
 func (s *IntSet) String() string {
@@ -70,4 +67,3 @@ func (s *IntSet) String() string {
 	return buf.String()
 }
 
-//!-string

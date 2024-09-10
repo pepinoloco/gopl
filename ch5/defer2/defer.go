@@ -12,7 +12,6 @@ import (
 	"runtime"
 )
 
-//!+
 func main() {
 	defer printStack()
 	f(3)
@@ -24,7 +23,6 @@ func printStack() {
 	os.Stdout.Write(buf[:n])
 }
 
-//!-
 
 func f(x int) {
 	fmt.Printf("f(%d)\n", x+0/x) // panics if x == 0
@@ -33,7 +31,6 @@ func f(x int) {
 }
 
 /*
-//!+printstack
 goroutine 1 [running]:
 main.printStack()
 	src/gopl/ch5/defer2/defer.go:20
@@ -47,5 +44,4 @@ main.f(3)
 	src/gopl/ch5/defer2/defer.go:29
 main.main()
 	src/gopl/ch5/defer2/defer.go:15
-//!-printstack
 */

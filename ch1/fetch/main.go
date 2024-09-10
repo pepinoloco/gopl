@@ -2,7 +2,6 @@
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 // See page 16.
-//!+
 
 // Fetch prints the content found at each specified URL.
 package main
@@ -31,4 +30,3 @@ func main() {
 	}
 }
 
-//!-

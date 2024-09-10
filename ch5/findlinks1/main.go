@@ -2,7 +2,6 @@
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 // See page 122.
-//!+main
 
 // Findlinks1 prints the links in an HTML document read from standard input.
 package main
@@ -25,9 +24,7 @@ func main() {
 	}
 }
 
-//!-main
 
-//!+visit
 // visit appends to links each link found in n and returns the result.
 func visit(links []string, n *html.Node) []string {
 	if n.Type == html.ElementNode && n.Data == "a" {
@@ -43,10 +40,8 @@ func visit(links []string, n *html.Node) []string {
 	return links
 }
 
-//!-visit
 
 /*
-//!+html
 package html
 
 type Node struct {
@@ -72,5 +67,4 @@ type Attribute struct {
 }
 
 func Parse(r io.Reader) (*Node, error)
-//!-html
 */

@@ -14,7 +14,6 @@ import (
 	"path"
 )
 
-//!+
 // Fetch downloads the URL and returns the
 // name and length of the local file.
 func fetch(url string) (filename string, n int64, err error) {
@@ -40,7 +39,6 @@ func fetch(url string) (filename string, n int64, err error) {
 	return local, n, err
 }
 
-//!-
 
 func main() {
 	for _, url := range os.Args[1:] {

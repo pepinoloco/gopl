@@ -27,7 +27,6 @@ func crawl(url string) []string {
 	return list
 }
 
-//!+
 func main() {
 	worklist := make(chan []string)  // lists of URLs, may have duplicates
 	unseenLinks := make(chan string) // de-duplicated URLs
@@ -58,4 +57,3 @@ func main() {
 	}
 }
 
-//!-

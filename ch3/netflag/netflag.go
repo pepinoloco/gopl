@@ -11,7 +11,6 @@ import (
 	. "net"
 )
 
-//!+
 func IsUp(v Flags) bool     { return v&FlagUp == FlagUp }
 func TurnDown(v *Flags)     { *v &^= FlagUp }
 func SetBroadcast(v *Flags) { *v |= FlagBroadcast }
@@ -27,4 +26,3 @@ func main() {
 	fmt.Printf("%b %t\n", v, IsCast(v)) // "10010 true"
 }
 
-//!-

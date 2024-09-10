@@ -19,7 +19,6 @@ type result struct {
 	err   error
 }
 
-//!+
 type entry struct {
 	res   result
 	ready chan struct{} // closed when res is ready
@@ -58,4 +57,3 @@ func (memo *Memo) Get(key string) (value interface{}, err error) {
 	return e.res.value, e.res.err
 }
 
-//!-

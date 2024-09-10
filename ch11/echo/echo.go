@@ -2,7 +2,6 @@
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 // See page 308.
-//!+
 
 // Echo prints its command-line arguments.
 package main
@@ -38,4 +37,3 @@ func echo(newline bool, sep string, args []string) error {
 	return nil
 }
 
-//!-

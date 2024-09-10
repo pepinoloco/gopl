@@ -13,7 +13,6 @@ import (
 	"golang.org/x/net/html"
 )
 
-//!+
 func main() {
 	doc, err := html.Parse(os.Stdin)
 	if err != nil {
@@ -33,4 +32,3 @@ func outline(stack []string, n *html.Node) {
 	}
 }
 
-//!-

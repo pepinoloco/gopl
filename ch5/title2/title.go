@@ -29,7 +29,6 @@ func forEachNode(n *html.Node, pre, post func(n *html.Node)) {
 	}
 }
 
-//!+
 func title(url string) error {
 	resp, err := http.Get(url)
 	if err != nil {
@@ -48,7 +47,6 @@ func title(url string) error {
 	}
 
 	// ...print doc's title element...
-	//!-
 	visitNode := func(n *html.Node) {
 		if n.Type == html.ElementNode && n.Data == "title" &&
 			n.FirstChild != nil {
@@ -56,12 +54,10 @@ func title(url string) error {
 		}
 	}
 	forEachNode(doc, visitNode, nil)
-	//!+
 
 	return nil
 }
 
-//!-
 
 func main() {
 	for _, arg := range os.Args[1:] {

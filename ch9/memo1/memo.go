@@ -3,7 +3,6 @@
 
 // See page 272.
 
-//!+
 
 // Package memo provides a concurrency-unsafe
 // memoization of a function of type Func.
@@ -37,4 +36,3 @@ func (memo *Memo) Get(key string) (interface{}, error) {
 	return res.value, res.err
 }
 
-//!-

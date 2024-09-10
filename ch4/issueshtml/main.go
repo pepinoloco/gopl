@@ -13,7 +13,6 @@ import (
 	"gopl/ch4/github"
 )
 
-//!+template
 import "html/template"
 
 var issueList = template.Must(template.New("issuelist").Parse(`
@@ -36,9 +35,7 @@ var issueList = template.Must(template.New("issuelist").Parse(`
 </table>
 `))
 
-//!-template
 
-//!+
 func main() {
 	result, err := github.SearchIssues(os.Args[1:])
 	if err != nil {
@@ -49,4 +46,3 @@ func main() {
 	}
 }
 
-//!-

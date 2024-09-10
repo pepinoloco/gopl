@@ -21,7 +21,6 @@ func New(f Func) *Memo {
 	return &Memo{f: f, cache: make(map[string]result)}
 }
 
-//!+
 
 type Memo struct {
 	f     Func
@@ -41,4 +40,3 @@ func (memo *Memo) Get(key string) (value interface{}, err error) {
 	return res.value, res.err
 }
 
-//!-

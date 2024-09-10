@@ -12,14 +12,12 @@ import (
 	"strconv"
 )
 
-//!+Display
 
 func Display(name string, x interface{}) {
 	fmt.Printf("Display %s (%T):\n", name, x)
 	display(name, reflect.ValueOf(x))
 }
 
-//!-Display
 
 // formatAtom formats a value without inspecting its internal structure.
 // It is a copy of the the function in gopl/ch11/format.
@@ -50,7 +48,6 @@ func formatAtom(v reflect.Value) string {
 	}
 }
 
-//!+display
 func display(path string, v reflect.Value) {
 	switch v.Kind() {
 	case reflect.Invalid:
@@ -87,4 +84,3 @@ func display(path string, v reflect.Value) {
 	}
 }
 
-//!-display

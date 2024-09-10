@@ -14,7 +14,6 @@ import (
 	"strings"
 )
 
-//!+Unpack
 
 // Unpack populates the fields of the struct pointed to by ptr
 // from the HTTP request parameters in req.
@@ -59,9 +58,7 @@ func Unpack(req *http.Request, ptr interface{}) error {
 	return nil
 }
 
-//!-Unpack
 
-//!+populate
 func populate(v reflect.Value, value string) error {
 	switch v.Kind() {
 	case reflect.String:
@@ -87,4 +84,3 @@ func populate(v reflect.Value, value string) error {
 	return nil
 }
 
-//!-populate

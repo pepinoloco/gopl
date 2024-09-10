@@ -12,7 +12,6 @@ import (
 	"time"
 )
 
-//!+sleep
 var period = flag.Duration("period", 1*time.Second, "sleep period")
 
 func main() {
@@ -22,4 +21,3 @@ func main() {
 	fmt.Println()
 }
 
-//!-sleep

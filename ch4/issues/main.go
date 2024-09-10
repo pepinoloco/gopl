@@ -2,7 +2,6 @@
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 // See page 112.
-//!+
 
 // Issues prints a table of GitHub issues matching the search terms.
 package main
@@ -15,7 +14,6 @@ import (
 	"gopl/ch4/github"
 )
 
-//!+
 func main() {
 	result, err := github.SearchIssues(os.Args[1:])
 	if err != nil {
@@ -28,10 +26,8 @@ func main() {
 	}
 }
 
-//!-
 
 /*
-//!+textoutput
 $ go build gopl/ch4/issues
 $ ./issues repo:golang/go is:open json decoder
 13 issues:
@@ -48,5 +44,4 @@ $ ./issues repo:golang/go is:open json decoder
 #6384    joeshaw encoding/json: encode precise floating point integers u
 #6647    btracey x/tools/cmd/godoc: display type kind of each named type
 #4237  gjemiller encoding/base64: URLEncoding padding is optional
-//!-textoutput
 */

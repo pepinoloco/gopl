@@ -2,7 +2,6 @@
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 // See page 6.
-//!+
 
 // Echo2 prints its command-line arguments.
 package main
@@ -21,4 +20,3 @@ func main() {
 	fmt.Println(s)
 }
 
-//!-

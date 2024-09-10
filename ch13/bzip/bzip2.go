@@ -20,7 +20,6 @@
 // it returns, it clears the fields of the bz_stream that contain
 // pointers to Go variables.
 
-//!+
 
 // Package bzip provides a writer that uses bzip2 compression (bzip.org).
 package bzip
@@ -58,9 +57,7 @@ func NewWriter(out io.Writer) io.WriteCloser {
 	return w
 }
 
-//!-
 
-//!+write
 func (w *writer) Write(data []byte) (int, error) {
 	if w.stream == nil {
 		panic("closed")
@@ -81,9 +78,7 @@ func (w *writer) Write(data []byte) (int, error) {
 	return total, nil
 }
 
-//!-write
 
-//!+close
 // Close flushes the compressed data and closes the stream.
 // It does not close the underlying io.Writer.
 func (w *writer) Close() error {
@@ -108,4 +103,3 @@ func (w *writer) Close() error {
 	}
 }
 
-//!-close

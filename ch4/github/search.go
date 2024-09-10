@@ -1,7 +1,6 @@
 // Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
-//!+
 
 package github
 
@@ -20,7 +19,6 @@ func SearchIssues(terms []string) (*IssuesSearchResult, error) {
 	if err != nil {
 		return nil, err
 	}
-	//!-
 	// For long-term stability, instead of http.Get, use the
 	// variant below which adds an HTTP request header indicating
 	// that only version 3 of the GitHub API is acceptable.
@@ -32,7 +30,6 @@ func SearchIssues(terms []string) (*IssuesSearchResult, error) {
 	//   req.Header.Set(
 	//       "Accept", "application/vnd.github.v3.text-match+json")
 	//   resp, err := http.DefaultClient.Do(req)
-	//!+
 
 	// We must close resp.Body on all execution paths.
 	// (Chapter 5 presents 'defer', which makes this simpler.)
@@ -50,4 +47,3 @@ func SearchIssues(terms []string) (*IssuesSearchResult, error) {
 	return &result, nil
 }
 
-//!-

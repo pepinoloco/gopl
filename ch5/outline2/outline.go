@@ -32,14 +32,11 @@ func outline(url string) error {
 		return err
 	}
 
-	//!+call
 	forEachNode(doc, startElement, endElement)
-	//!-call
 
 	return nil
 }
 
-//!+forEachNode
 // forEachNode calls the functions pre(x) and post(x) for each node
 // x in the tree rooted at n. Both functions are optional.
 // pre is called before the children are visited (preorder) and
@@ -58,9 +55,7 @@ func forEachNode(n *html.Node, pre, post func(n *html.Node)) {
 	}
 }
 
-//!-forEachNode
 
-//!+startend
 var depth int
 
 func startElement(n *html.Node) {
@@ -77,4 +72,3 @@ func endElement(n *html.Node) {
 	}
 }
 
-//!-startend

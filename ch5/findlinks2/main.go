@@ -33,7 +33,6 @@ func visit(links []string, n *html.Node) []string {
 	return links
 }
 
-//!+
 func main() {
 	for _, url := range os.Args[1:] {
 		links, err := findLinks(url)
@@ -66,4 +65,3 @@ func findLinks(url string) ([]string, error) {
 	return visit(nil, doc), nil
 }
 
-//!-

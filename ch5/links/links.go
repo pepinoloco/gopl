@@ -2,7 +2,6 @@
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 // See page 138.
-//!+Extract
 
 // Package links provides a link-extraction function.
 package links
@@ -51,7 +50,6 @@ func Extract(url string) ([]string, error) {
 	return links, nil
 }
 
-//!-Extract
 
 // Copied from gopl/ch5/outline2.
 func forEachNode(n *html.Node, pre, post func(n *html.Node)) {

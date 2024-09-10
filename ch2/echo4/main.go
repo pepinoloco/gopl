@@ -2,7 +2,6 @@
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 // See page 33.
-//!+
 
 // Echo4 prints its command-line arguments.
 package main
@@ -24,4 +23,3 @@ func main() {
 	}
 }
 
-//!-

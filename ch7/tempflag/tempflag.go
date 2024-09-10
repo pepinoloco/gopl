@@ -13,7 +13,6 @@ import (
 	"gopl/ch7/tempconv"
 )
 
-//!+
 var temp = tempconv.CelsiusFlag("temp", 20.0, "the temperature")
 
 func main() {
@@ -21,4 +20,3 @@ func main() {
 	fmt.Println(*temp)
 }
 
-//!-

@@ -9,7 +9,6 @@
 // This implementation uses a monitor goroutine.
 package memo
 
-//!+Func
 
 // Func is the type of the function to memoize.
 type Func func(key string) (interface{}, error)
@@ -25,9 +24,7 @@ type entry struct {
 	ready chan struct{} // closed when res is ready
 }
 
-//!-Func
 
-//!+get
 
 // A request is a message requesting that the Func be applied to key.
 type request struct {
@@ -53,9 +50,7 @@ func (memo *Memo) Get(key string) (interface{}, error) {
 
 func (memo *Memo) Close() { close(memo.requests) }
 
-//!-get
 
-//!+monitor
 
 func (memo *Memo) server(f Func) {
 	cache := make(map[string]*entry)
@@ -85,4 +80,3 @@ func (e *entry) deliver(response chan<- result) {
 	response <- e.res
 }
 
-//!-monitor

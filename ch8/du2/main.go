@@ -18,13 +18,11 @@ import (
 	"time"
 )
 
-//!+
 var verbose = flag.Bool("v", false, "show verbose progress messages")
 
 func main() {
 	// ...start background goroutine...
 
-	//!-
 	// Determine the initial directories.
 	flag.Parse()
 	roots := flag.Args()
@@ -41,7 +39,6 @@ func main() {
 		close(fileSizes)
 	}()
 
-	//!+
 	// Print the results periodically.
 	var tick <-chan time.Time
 	if *verbose {
@@ -64,7 +61,6 @@ loop:
 	printDiskUsage(nfiles, nbytes) // final totals
 }
 
-//!-
 
 func printDiskUsage(nfiles, nbytes int64) {
 	fmt.Printf("%d files  %.1f GB\n", nfiles, float64(nbytes)/1e9)

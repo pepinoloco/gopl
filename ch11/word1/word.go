@@ -2,7 +2,6 @@
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 // See page 303.
-//!+
 
 // Package word provides utilities for word games.
 package word
@@ -18,4 +17,3 @@ func IsPalindrome(s string) bool {
 	return true
 }
 
-//!-

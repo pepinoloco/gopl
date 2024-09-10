@@ -1,7 +1,6 @@
 // Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
-//!+test
 package word
 
 import "testing"
@@ -21,12 +20,10 @@ func TestNonPalindrome(t *testing.T) {
 	}
 }
 
-//!-test
 
 // The tests below are expected to fail.
 // See package gopl/ch11/word2 for the fix.
 
-//!+more
 func TestFrenchPalindrome(t *testing.T) {
 	if !IsPalindrome("été") {
 		t.Error(`IsPalindrome("été") = false`)
@@ -40,4 +37,3 @@ func TestCanalPalindrome(t *testing.T) {
 	}
 }
 
-//!-more

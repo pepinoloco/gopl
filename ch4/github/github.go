@@ -2,7 +2,6 @@
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 // See page 110.
-//!+
 
 // Package github provides a Go API for the GitHub issue tracker.
 // See https://developer.github.com/v3/search/#search-issues.
@@ -32,4 +31,3 @@ type User struct {
 	HTMLURL string `json:"html_url"`
 }
 
-//!-

@@ -9,7 +9,6 @@ import (
 	"testing"
 )
 
-//!+TestCoverage
 func TestCoverage(t *testing.T) {
 	var tests = []struct {
 		input string
@@ -45,4 +44,3 @@ func TestCoverage(t *testing.T) {
 	}
 }
 
-//!-TestCoverage

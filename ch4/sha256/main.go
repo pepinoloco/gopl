@@ -8,7 +8,6 @@ package main
 
 import "fmt"
 
-//!+
 import "crypto/sha256"
 
 func main() {
@@ -22,4 +21,3 @@ func main() {
 	// [32]uint8
 }
 
-//!-

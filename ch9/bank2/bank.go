@@ -6,7 +6,6 @@
 // Package bank provides a concurrency-safe bank with one account.
 package bank
 
-//!+
 var (
 	sema    = make(chan struct{}, 1) // a binary semaphore guarding balance
 	balance int
@@ -25,4 +24,3 @@ func Balance() int {
 	return b
 }
 
-//!-

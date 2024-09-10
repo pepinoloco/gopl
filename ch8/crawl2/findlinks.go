@@ -17,7 +17,6 @@ import (
 	"gopl/ch5/links"
 )
 
-//!+sema
 // tokens is a counting semaphore used to
 // enforce a limit of 20 concurrent requests.
 var tokens = make(chan struct{}, 20)
@@ -34,9 +33,7 @@ func crawl(url string) []string {
 	return list
 }
 
-//!-sema
 
-//!+
 func main() {
 	worklist := make(chan []string)
 	var n int // number of pending sends to worklist
@@ -61,4 +58,3 @@ func main() {
 	}
 }
 
-//!-

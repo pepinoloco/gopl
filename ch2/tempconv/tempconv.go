@@ -1,7 +1,6 @@
 // Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
-//!+
 
 // Package tempconv performs Celsius and Fahrenheit conversions.
 package tempconv
@@ -20,4 +19,3 @@ const (
 func (c Celsius) String() string    { return fmt.Sprintf("%g°C", c) }
 func (f Fahrenheit) String() string { return fmt.Sprintf("%g°F", f) }
 
-//!-

@@ -7,7 +7,6 @@
 package main
 
 /*
-//!+output
 $ go build gopl/ch5/title1
 $ ./title1 http://gopl
 The Go Programming Language
@@ -16,7 +15,6 @@ Effective Go - The Go Programming Language
 $ ./title1 https://golang.org/doc/gopher/frontpage.png
 title: https://golang.org/doc/gopher/frontpage.png
     has type image/png, not text/html
-//!-output
 */
 
 import (
@@ -41,7 +39,6 @@ func forEachNode(n *html.Node, pre, post func(n *html.Node)) {
 	}
 }
 
-//!+
 func title(url string) error {
 	resp, err := http.Get(url)
 	if err != nil {
@@ -71,7 +68,6 @@ func title(url string) error {
 	return nil
 }
 
-//!-
 
 func main() {
 	for _, arg := range os.Args[1:] {

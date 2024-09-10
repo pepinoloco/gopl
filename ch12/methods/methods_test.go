@@ -30,7 +30,6 @@ func ExamplePrintReplacer() {
 }
 
 /*
-//!+output
 methods.Print(time.Hour)
 // Output:
 // type time.Duration
@@ -45,5 +44,4 @@ methods.Print(new(strings.Replacer))
 // type *strings.Replacer
 // func (*strings.Replacer) Replace(string) string
 // func (*strings.Replacer) WriteString(io.Writer, string) (int, error)
-//!-output
 */

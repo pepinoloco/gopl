@@ -28,7 +28,6 @@ func forEachNode(n *html.Node, pre, post func(n *html.Node)) {
 	}
 }
 
-//!+
 // soleTitle returns the text of the first non-empty title element
 // in doc, and an error if there was not exactly one.
 func soleTitle(doc *html.Node) (title string, err error) {
@@ -62,7 +61,6 @@ func soleTitle(doc *html.Node) (title string, err error) {
 	return title, nil
 }
 
-//!-
 
 func title(url string) error {
 	resp, err := http.Get(url)

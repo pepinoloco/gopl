@@ -2,7 +2,6 @@
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 // See page 58.
-//!+
 
 // Surface computes an SVG rendering of a 3-D surface function.
 package main
@@ -59,4 +58,3 @@ func f(x, y float64) float64 {
 	return math.Sin(r) / r
 }
 
-//!-

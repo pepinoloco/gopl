@@ -23,7 +23,6 @@ func (d dollars) String() string { return fmt.Sprintf("$%.2f", d) }
 
 type database map[string]dollars
 
-//!+handler
 func (db database) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 	switch req.URL.Path {
 	case "/list":
@@ -45,4 +44,3 @@ func (db database) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 	}
 }
 
-//!-handler

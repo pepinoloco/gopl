@@ -1,7 +1,6 @@
 // Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
-//!+test
 package storage
 
 import (
@@ -33,10 +32,8 @@ func TestCheckQuotaNotifiesUser(t *testing.T) {
 	}
 }
 
-//!-test
 
 /*
-//!+defer
 func TestCheckQuotaNotifiesUser(t *testing.T) {
 	// Save and restore original notifyUser.
 	saved := notifyUser
@@ -49,5 +46,4 @@ func TestCheckQuotaNotifiesUser(t *testing.T) {
 	}
 	// ...rest of test...
 }
-//!-defer
 */

@@ -4,7 +4,6 @@
 // See page 156.
 
 // Package geometry defines simple types for plane geometry.
-//!+point
 package geometry
 
 import "math"
@@ -21,9 +20,7 @@ func (p Point) Distance(q Point) float64 {
 	return math.Hypot(q.X-p.X, q.Y-p.Y)
 }
 
-//!-point
 
-//!+path
 
 // A Path is a journey connecting the points with straight lines.
 type Path []Point
@@ -39,4 +36,3 @@ func (path Path) Distance() float64 {
 	return sum
 }
 
-//!-path

@@ -28,7 +28,6 @@ func appendslice(x []int, y ...int) []int {
 	return z
 }
 
-//!+append
 func appendInt(x []int, y int) []int {
 	var z []int
 	zlen := len(x) + 1
@@ -49,9 +48,7 @@ func appendInt(x []int, y int) []int {
 	return z
 }
 
-//!-append
 
-//!+growth
 func main() {
 	var x, y []int
 	for i := 0; i < 10; i++ {
@@ -61,10 +58,8 @@ func main() {
 	}
 }
 
-//!-growth
 
 /*
-//!+output
 0  cap=1   [0]
 1  cap=2   [0 1]
 2  cap=4   [0 1 2]
@@ -75,5 +70,4 @@ func main() {
 7  cap=8   [0 1 2 3 4 5 6 7]
 8  cap=16  [0 1 2 3 4 5 6 7 8]
 9  cap=16  [0 1 2 3 4 5 6 7 8 9]
-//!-output
 */

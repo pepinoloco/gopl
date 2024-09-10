@@ -2,7 +2,6 @@
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 // See page 254.
-//!+
 
 // Chat is a server that lets clients chat with each other.
 package main
@@ -14,7 +13,6 @@ import (
 	"net"
 )
 
-//!+broadcaster
 type client chan<- string // an outgoing message channel
 
 var (
@@ -44,9 +42,7 @@ func broadcaster() {
 	}
 }
 
-//!-broadcaster
 
-//!+handleConn
 func handleConn(conn net.Conn) {
 	ch := make(chan string) // outgoing client messages
 	go clientWriter(conn, ch)
@@ -73,9 +69,7 @@ func clientWriter(conn net.Conn, ch <-chan string) {
 	}
 }
 
-//!-handleConn
 
-//!+main
 func main() {
 	listener, err := net.Listen("tcp", "localhost:8000")
 	if err != nil {
@@ -93,4 +87,3 @@ func main() {
 	}
 }
 
-//!-main

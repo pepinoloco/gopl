@@ -94,12 +94,10 @@ func TestEqual(t *testing.T) {
 }
 
 func Example_equal() {
-	//!+
 	fmt.Println(Equal([]int{1, 2, 3}, []int{1, 2, 3}))        // "true"
 	fmt.Println(Equal([]string{"foo"}, []string{"bar"}))      // "false"
 	fmt.Println(Equal([]string(nil), []string{}))             // "true"
 	fmt.Println(Equal(map[string]int(nil), map[string]int{})) // "true"
-	//!-
 
 	// Output:
 	// true
@@ -109,7 +107,6 @@ func Example_equal() {
 }
 
 func Example_equalCycle() {
-	//!+cycle
 	// Circular linked lists a -> b -> a and c -> c.
 	type link struct {
 		value string
@@ -122,7 +119,6 @@ func Example_equalCycle() {
 	fmt.Println(Equal(c, c)) // "true"
 	fmt.Println(Equal(a, b)) // "false"
 	fmt.Println(Equal(a, c)) // "false"
-	//!-cycle
 
 	// Output:
 	// true

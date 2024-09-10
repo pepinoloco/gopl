@@ -22,7 +22,6 @@ type Wheel struct {
 
 func main() {
 	var w Wheel
-	//!+
 	w = Wheel{Circle{Point{8, 8}, 5}, 20}
 
 	w = Wheel{
@@ -42,5 +41,4 @@ func main() {
 	fmt.Printf("%#v\n", w)
 	// Output:
 	// Wheel{Circle:Circle{Point:Point{X:42, Y:8}, Radius:5}, Spokes:20}
-	//!-
 }

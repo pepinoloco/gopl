@@ -17,7 +17,6 @@ type dollars float32
 
 func (d dollars) String() string { return fmt.Sprintf("$%.2f", d) }
 
-//!+main
 
 func main() {
 	db := database{"shoes": 50, "socks": 5}
@@ -46,10 +45,8 @@ func (db database) price(w http.ResponseWriter, req *http.Request) {
 	fmt.Fprintf(w, "%s\n", price)
 }
 
-//!-main
 
 /*
-//!+handlerfunc
 package http
 
 type HandlerFunc func(w ResponseWriter, r *Request)
@@ -57,5 +54,4 @@ type HandlerFunc func(w ResponseWriter, r *Request)
 func (f HandlerFunc) ServeHTTP(w ResponseWriter, r *Request) {
 	f(w, r)
 }
-//!-handlerfunc
 */

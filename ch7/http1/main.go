@@ -12,7 +12,6 @@ import (
 	"net/http"
 )
 
-//!+main
 
 func main() {
 	db := database{"shoes": 50, "socks": 5}
@@ -31,10 +30,8 @@ func (db database) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 	}
 }
 
-//!-main
 
 /*
-//!+handler
 package http
 
 type Handler interface {
@@ -42,5 +39,4 @@ type Handler interface {
 }
 
 func ListenAndServe(address string, h Handler) error
-//!-handler
 */

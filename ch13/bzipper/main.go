@@ -3,7 +3,6 @@
 
 // See page 365.
 
-//!+
 
 // Bzipper reads input, bzip2-compresses it, and writes it out.
 package main
@@ -26,4 +25,3 @@ func main() {
 	}
 }
 
-//!-

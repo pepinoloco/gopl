@@ -2,7 +2,6 @@
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 // See page 29.
-//!+
 
 // Ftoc prints two Fahrenheit-to-Celsius conversions.
 package main
@@ -19,4 +18,3 @@ func fToC(f float64) float64 {
 	return (f - 32) * 5 / 9
 }
 
-//!-

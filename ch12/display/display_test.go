@@ -91,7 +91,6 @@ func Example_array() {
 }
 
 func Example_movie() {
-	//!+movie
 	type Movie struct {
 		Title, Subtitle string
 		Year            int
@@ -100,8 +99,6 @@ func Example_movie() {
 		Oscars          []string
 		Sequel          *string
 	}
-	//!-movie
-	//!+strangelove
 	strangelove := Movie{
 		Title:    "Dr. Strangelove",
 		Subtitle: "How I Learned to Stop Worrying and Love the Bomb",
@@ -123,13 +120,11 @@ func Example_movie() {
 			"Best Picture (Nomin.)",
 		},
 	}
-	//!-strangelove
 	Display("strangelove", strangelove)
 
 	// We don't use an Output: comment since displaying
 	// a map is nondeterministic.
 	/*
-		//!+output
 		Display strangelove (display.Movie):
 		strangelove.Title = "Dr. Strangelove"
 		strangelove.Subtitle = "How I Learned to Stop Worrying and Love the Bomb"
@@ -146,7 +141,6 @@ func Example_movie() {
 		strangelove.Oscars[2] = "Best Director (Nomin.)"
 		strangelove.Oscars[3] = "Best Picture (Nomin.)"
 		strangelove.Sequel = nil
-		//!-output
 	*/
 }
 

@@ -2,7 +2,6 @@
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 // See page 17.
-//!+
 
 // Fetchall fetches URLs in parallel and reports their times and sizes.
 package main
@@ -46,4 +45,3 @@ func fetch(url string, ch chan<- string) {
 	ch <- fmt.Sprintf("%.2fs  %7d  %s", secs, nbytes, url)
 }
 
-//!-
