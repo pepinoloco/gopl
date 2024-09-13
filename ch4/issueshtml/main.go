@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 115.
-
 // Issueshtml prints an HTML table of issues matching the search terms.
 package main
 
@@ -35,7 +30,6 @@ var issueList = template.Must(template.New("issuelist").Parse(`
 </table>
 `))
 
-
 func main() {
 	result, err := github.SearchIssues(os.Args[1:])
 	if err != nil {
@@ -45,4 +39,3 @@ func main() {
 		log.Fatal(err)
 	}
 }
-

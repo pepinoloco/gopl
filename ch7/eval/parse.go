@@ -1,6 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
 package eval
 
 import (
@@ -50,12 +47,11 @@ func precedence(op rune) int {
 
 // Parse parses the input string as an arithmetic expression.
 //
-//   expr = num                         a literal number, e.g., 3.14159
-//        | id                          a variable name, e.g., x
-//        | id '(' expr ',' ... ')'     a function call
-//        | '-' expr                    a unary operator (+-)
-//        | expr '+' expr               a binary operator (+-*/)
-//
+//	expr = num                         a literal number, e.g., 3.14159
+//	     | id                          a variable name, e.g., x
+//	     | id '(' expr ',' ... ')'     a function call
+//	     | '-' expr                    a unary operator (+-)
+//	     | expr '+' expr               a binary operator (+-*/)
 func Parse(input string) (_ Expr, err error) {
 	defer func() {
 		switch x := recover().(type) {
@@ -108,9 +104,10 @@ func parseUnary(lex *lexer) Expr {
 }
 
 // primary = id
-//         | id '(' expr ',' ... ',' expr ')'
-//         | num
-//         | '(' expr ')'
+//
+//	| id '(' expr ',' ... ',' expr ')'
+//	| num
+//	| '(' expr ')'
 func parsePrimary(lex *lexer) Expr {
 	switch lex.token {
 	case scanner.Ident:

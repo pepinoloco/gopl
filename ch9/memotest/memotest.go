@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 272.
-
 // Package memotest provides common functions for
 // testing various designs of the memo package.
 package memotest
@@ -25,7 +20,6 @@ func httpGetBody(url string) (interface{}, error) {
 	defer resp.Body.Close()
 	return ioutil.ReadAll(resp.Body)
 }
-
 
 var HTTPGetBody = httpGetBody
 

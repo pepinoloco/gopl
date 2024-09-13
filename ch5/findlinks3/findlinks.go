@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 139.
-
 // Findlinks3 crawls the web, starting with the URLs on the command line.
 package main
 
@@ -31,7 +26,6 @@ func breadthFirst(f func(item string) []string, worklist []string) {
 	}
 }
 
-
 func crawl(url string) []string {
 	fmt.Println(url)
 	list, err := links.Extract(url)
@@ -41,10 +35,8 @@ func crawl(url string) []string {
 	return list
 }
 
-
 func main() {
 	// Crawl the web breadth-first,
 	// starting from the command-line arguments.
 	breadthFirst(crawl, os.Args[1:])
 }
-

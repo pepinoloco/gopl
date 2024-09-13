@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 263.
-
 // Package bank provides a concurrency-safe single-account bank.
 package bank
 
@@ -25,4 +20,3 @@ func Balance() int {
 	mu.Unlock()
 	return b
 }
-

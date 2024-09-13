@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 150.
-
 // Defer1 demonstrates a deferred call being invoked during a panic.
 package main
 
@@ -17,7 +12,6 @@ func f(x int) {
 	defer fmt.Printf("defer %d\n", x)
 	f(x - 1)
 }
-
 
 /*
 f(3)

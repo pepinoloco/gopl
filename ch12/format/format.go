@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 332.
-
 // Package format provides an Any function that can format any value.
 package format
 
@@ -39,4 +34,3 @@ func formatAtom(v reflect.Value) string {
 		return v.Type().String() + " value"
 	}
 }
-

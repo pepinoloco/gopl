@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 146.
-
 // The trace program uses defer to add entry/exit diagnostics to a function.
 package main
 
@@ -22,7 +17,6 @@ func trace(msg string) func() {
 	log.Printf("enter %s", msg)
 	return func() { log.Printf("exit %s (%s)", msg, time.Since(start)) }
 }
-
 
 func main() {
 	bigSlowOperation()

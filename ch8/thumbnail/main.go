@@ -1,6 +1,4 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
+//go:build ignore
 // +build ignore
 
 // The thumbnail command produces thumbnails of JPEG files
@@ -11,10 +9,10 @@
 // this:
 //
 // Run with:
-//   $ go run $GOPATH/src/gopl/ch8/thumbnail/main.go
-//   foo.jpeg
-//   ^D
 //
+//	$ go run $GOPATH/src/gopl/ch8/thumbnail/main.go
+//	foo.jpeg
+//	^D
 package main
 
 import (

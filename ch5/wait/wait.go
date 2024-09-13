@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 130.
-
 // The wait program waits for an HTTP server to start responding.
 package main
 
@@ -30,7 +25,6 @@ func WaitForServer(url string) error {
 	}
 	return fmt.Errorf("server %s failed to respond after %s", url, timeout)
 }
-
 
 func main() {
 	if len(os.Args) != 2 {

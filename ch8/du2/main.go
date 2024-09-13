@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 249.
-
 // The du2 command computes the disk usage of the files in a directory.
 package main
 
@@ -60,7 +55,6 @@ loop:
 	}
 	printDiskUsage(nfiles, nbytes) // final totals
 }
-
 
 func printDiskUsage(nfiles, nbytes int64) {
 	fmt.Printf("%d files  %.1f GB\n", nfiles, float64(nbytes)/1e9)

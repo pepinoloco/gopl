@@ -1,9 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 272.
-
-
 // Package memo provides a concurrency-unsafe
 // memoization of a function of type Func.
 package memo
@@ -35,4 +29,3 @@ func (memo *Memo) Get(key string) (interface{}, error) {
 	}
 	return res.value, res.err
 }
-

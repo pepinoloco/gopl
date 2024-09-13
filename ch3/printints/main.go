@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 74.
-
 // Printints demonstrates the use of bytes.Buffer to format a string.
 package main
 
@@ -28,4 +23,3 @@ func intsToString(values []int) string {
 func main() {
 	fmt.Println(intsToString([]int{1, 2, 3})) // "[1, 2, 3]"
 }
-

@@ -1,7 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 362.
 // This is the version that appears in print,
 // but it does not comply with the proposed
 // rules for passing pointers between Go and C.
@@ -43,7 +39,6 @@ func NewWriter(out io.Writer) io.WriteCloser {
 	return w
 }
 
-
 func (w *writer) Write(data []byte) (int, error) {
 	if w.stream == nil {
 		panic("closed")
@@ -63,7 +58,6 @@ func (w *writer) Write(data []byte) (int, error) {
 	}
 	return total, nil
 }
-
 
 // Close flushes the compressed data and closes the stream.
 // It does not close the underlying io.Writer.
@@ -87,4 +81,3 @@ func (w *writer) Close() error {
 		}
 	}
 }
-

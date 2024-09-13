@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 29.
-
 // Boiling prints the boiling point of water.
 package main
 
@@ -17,4 +12,3 @@ func main() {
 	// Output:
 	// boiling point = 212°F or 100°C
 }
-

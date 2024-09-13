@@ -1,6 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
 // This file is just a place to put example code from the book.
 // It does not actually run any code in gopl/ch8/thumbnail.
 
@@ -23,14 +20,12 @@ func makeThumbnails(filenames []string) {
 	}
 }
 
-
 // NOTE: incorrect!
 func makeThumbnails2(filenames []string) {
 	for _, f := range filenames {
 		go thumbnail.ImageFile(f) // NOTE: ignoring errors
 	}
 }
-
 
 // makeThumbnails3 makes thumbnails of the specified files in parallel.
 func makeThumbnails3(filenames []string) {
@@ -47,7 +42,6 @@ func makeThumbnails3(filenames []string) {
 		<-ch
 	}
 }
-
 
 // makeThumbnails4 makes thumbnails for the specified files in parallel.
 // It returns an error if any step failed.
@@ -69,7 +63,6 @@ func makeThumbnails4(filenames []string) error {
 
 	return nil
 }
-
 
 // makeThumbnails5 makes thumbnails for the specified files in parallel.
 // It returns the generated file names in an arbitrary order,
@@ -99,7 +92,6 @@ func makeThumbnails5(filenames []string) (thumbfiles []string, err error) {
 
 	return thumbfiles, nil
 }
-
 
 // makeThumbnails6 makes thumbnails for each file received from the channel.
 // It returns the number of bytes occupied by the files it creates.
@@ -133,4 +125,3 @@ func makeThumbnails6(filenames <-chan string) int64 {
 	}
 	return total
 }
-

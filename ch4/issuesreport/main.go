@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 113.
-
 // Issuesreport prints a report of issues matching the search terms.
 package main
 
@@ -23,11 +18,9 @@ Title:  {{.Title | printf "%.64s"}}
 Age:    {{.CreatedAt | daysAgo}} days
 {{end}}`
 
-
 func daysAgo(t time.Time) int {
 	return int(time.Since(t).Hours() / 24)
 }
-
 
 var report = template.Must(template.New("issuelist").
 	Funcs(template.FuncMap{"daysAgo": daysAgo}).
@@ -42,7 +35,6 @@ func main() {
 		log.Fatal(err)
 	}
 }
-
 
 func noMust() {
 	report, err := template.New("report").

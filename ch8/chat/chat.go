@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 254.
-
 // Chat is a server that lets clients chat with each other.
 package main
 
@@ -42,7 +37,6 @@ func broadcaster() {
 	}
 }
 
-
 func handleConn(conn net.Conn) {
 	ch := make(chan string) // outgoing client messages
 	go clientWriter(conn, ch)
@@ -69,7 +63,6 @@ func clientWriter(conn net.Conn, ch <-chan string) {
 	}
 }
 
-
 func main() {
 	listener, err := net.Listen("tcp", "localhost:8000")
 	if err != nil {
@@ -86,4 +79,3 @@ func main() {
 		go handleConn(conn)
 	}
 }
-

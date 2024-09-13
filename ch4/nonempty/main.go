@@ -1,9 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 91.
-
-
 // Nonempty is an example of an in-place slice algorithm.
 package main
 
@@ -22,7 +16,6 @@ func nonempty(strings []string) []string {
 	return strings[:i]
 }
 
-
 func main() {
 	data := []string{"one", "", "three"}
 	fmt.Printf("%q\n", nonempty(data)) // `["one" "three"]`
@@ -38,4 +31,3 @@ func nonempty2(strings []string) []string {
 	}
 	return out
 }
-

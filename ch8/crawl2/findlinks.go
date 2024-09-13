@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 241.
-
 // Crawl2 crawls web links starting with the command-line arguments.
 //
 // This version uses a buffered channel as a counting semaphore
@@ -33,7 +28,6 @@ func crawl(url string) []string {
 	return list
 }
 
-
 func main() {
 	worklist := make(chan []string)
 	var n int // number of pending sends to worklist
@@ -57,4 +51,3 @@ func main() {
 		}
 	}
 }
-

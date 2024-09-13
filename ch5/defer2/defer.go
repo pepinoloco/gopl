@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 151.
-
 // Defer2 demonstrates a deferred call to runtime.Stack during a panic.
 package main
 
@@ -22,7 +17,6 @@ func printStack() {
 	n := runtime.Stack(buf[:], false)
 	os.Stdout.Write(buf[:n])
 }
-
 
 func f(x int) {
 	fmt.Printf("f(%d)\n", x+0/x) // panics if x == 0

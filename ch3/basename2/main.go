@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 72.
-
 // Basename2 reads file names from stdin and prints the base name of each one.
 package main
 
@@ -31,4 +26,3 @@ func basename(s string) string {
 	}
 	return s
 }
-

@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 348.
-
 // Search is a demo of the params.Unpack function.
 package main
 
@@ -11,7 +6,6 @@ import (
 	"log"
 	"net/http"
 )
-
 
 import "gopl/ch12/params"
 
@@ -31,7 +25,6 @@ func search(resp http.ResponseWriter, req *http.Request) {
 	// ...rest of handler...
 	fmt.Fprintf(resp, "Search: %+v\n", data)
 }
-
 
 func main() {
 	http.HandleFunc("/search", search)

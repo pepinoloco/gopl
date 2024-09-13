@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 333.
-
 // Package display provides a means to display structured data.
 package display
 
@@ -12,12 +7,10 @@ import (
 	"strconv"
 )
 
-
 func Display(name string, x interface{}) {
 	fmt.Printf("Display %s (%T):\n", name, x)
 	display(name, reflect.ValueOf(x))
 }
-
 
 // formatAtom formats a value without inspecting its internal structure.
 // It is a copy of the the function in gopl/ch11/format.
@@ -83,4 +76,3 @@ func display(path string, v reflect.Value) {
 		fmt.Printf("%s = %s\n", path, formatAtom(v))
 	}
 }
-

@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 312.
-
 // Package storage is part of a hypothetical cloud storage server.
 package storage
 
@@ -44,4 +39,3 @@ func CheckQuota(username string) {
 	msg := fmt.Sprintf(template, used, percent)
 	notifyUser(username, msg)
 }
-

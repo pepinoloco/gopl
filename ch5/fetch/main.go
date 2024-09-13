@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 148.
-
 // Fetch saves the contents of a URL into a local file.
 package main
 
@@ -38,7 +33,6 @@ func fetch(url string) (filename string, n int64, err error) {
 	}
 	return local, n, err
 }
-
 
 func main() {
 	for _, url := range os.Args[1:] {

@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 339.
-
 package sexpr
 
 import (
@@ -19,7 +14,6 @@ func Marshal(v interface{}) ([]byte, error) {
 	}
 	return buf.Bytes(), nil
 }
-
 
 // encode writes to buf an S-expression representation of v.
 func encode(buf *bytes.Buffer, v reflect.Value) error {
@@ -90,4 +84,3 @@ func encode(buf *bytes.Buffer, v reflect.Value) error {
 	}
 	return nil
 }
-

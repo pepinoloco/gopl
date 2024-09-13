@@ -1,6 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
 package sexpr
 
 import (
@@ -16,8 +13,7 @@ import (
 // nondeterministic.  The output of the t.Log statements can be
 // inspected by running the test with the -v flag:
 //
-// 	$ go test -v gopl/ch12/sexpr
-//
+//	$ go test -v gopl/ch12/sexpr
 func Test(t *testing.T) {
 	type Movie struct {
 		Title, Subtitle string

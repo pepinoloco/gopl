@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 349.
-
 // Package params provides a reflection-based parser for URL parameters.
 package params
 
@@ -13,7 +8,6 @@ import (
 	"strconv"
 	"strings"
 )
-
 
 // Unpack populates the fields of the struct pointed to by ptr
 // from the HTTP request parameters in req.
@@ -58,7 +52,6 @@ func Unpack(req *http.Request, ptr interface{}) error {
 	return nil
 }
 
-
 func populate(v reflect.Value, value string) error {
 	switch v.Kind() {
 	case reflect.String:
@@ -83,4 +76,3 @@ func populate(v reflect.Value, value string) error {
 	}
 	return nil
 }
-

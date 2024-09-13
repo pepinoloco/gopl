@@ -1,8 +1,4 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
 // Run with "web" command-line argument for web server.
-// See page 13.
 
 // Lissajous generates GIF animations of random Lissajous figures.
 package main
@@ -23,7 +19,6 @@ import (
 	"net/http"
 	"time"
 )
-
 
 var palette = []color.Color{color.White, color.Black}
 
@@ -75,4 +70,3 @@ func lissajous(out io.Writer) {
 	}
 	gif.EncodeAll(out, &anim) // NOTE: ignoring encoding errors
 }
-

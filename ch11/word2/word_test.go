@@ -1,6 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
 package word
 
 import (
@@ -9,9 +6,7 @@ import (
 	"time"
 )
 
-
 import "testing"
-
 
 func TestIsPalindrome(t *testing.T) {
 	var tests = []struct {
@@ -39,14 +34,11 @@ func TestIsPalindrome(t *testing.T) {
 	}
 }
 
-
 func BenchmarkIsPalindrome(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		IsPalindrome("A man, a plan, a canal: Panama")
 	}
 }
-
-
 
 func ExampleIsPalindrome() {
 	fmt.Println(IsPalindrome("A man, a plan, a canal: Panama"))
@@ -55,7 +47,6 @@ func ExampleIsPalindrome() {
 	// true
 	// false
 }
-
 
 /*
 import "math/rand"
@@ -88,7 +79,6 @@ func TestRandomPalindromes(t *testing.T) {
 		}
 	}
 }
-
 
 /*
 // Answer for Exercicse 11.1: Modify randomPalindrome to exercise

@@ -1,6 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
 package storage
 
 import (
@@ -31,7 +28,6 @@ func TestCheckQuotaNotifiesUser(t *testing.T) {
 			"want substring %q", notifiedMsg, wantSubstring)
 	}
 }
-
 
 /*
 func TestCheckQuotaNotifiesUser(t *testing.T) {

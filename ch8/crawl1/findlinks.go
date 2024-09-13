@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 240.
-
 // Crawl1 crawls web links starting with the command-line arguments.
 //
 // This version quickly exhausts available file descriptors
@@ -28,7 +23,6 @@ func crawl(url string) []string {
 	return list
 }
 
-
 func main() {
 	worklist := make(chan []string)
 
@@ -48,7 +42,6 @@ func main() {
 		}
 	}
 }
-
 
 /*
 $ go build gopl/ch8/crawl1

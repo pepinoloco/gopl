@@ -1,7 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 362.
 //
 // The version of this program that appeared in the first and second
 // printings did not comply with the proposed rules for passing
@@ -19,7 +15,6 @@
 // bz_stream type.  Also, we have changed bz2compress so that before
 // it returns, it clears the fields of the bz_stream that contain
 // pointers to Go variables.
-
 
 // Package bzip provides a writer that uses bzip2 compression (bzip.org).
 package bzip
@@ -57,7 +52,6 @@ func NewWriter(out io.Writer) io.WriteCloser {
 	return w
 }
 
-
 func (w *writer) Write(data []byte) (int, error) {
 	if w.stream == nil {
 		panic("closed")
@@ -77,7 +71,6 @@ func (w *writer) Write(data []byte) (int, error) {
 	}
 	return total, nil
 }
-
 
 // Close flushes the compressed data and closes the stream.
 // It does not close the underlying io.Writer.
@@ -102,4 +95,3 @@ func (w *writer) Close() error {
 		}
 	}
 }
-

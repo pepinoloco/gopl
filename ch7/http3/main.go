@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 194.
-
 // Http3 is an e-commerce server that registers the /list and /price
 // endpoints by calling (*http.ServeMux).Handle.
 package main
@@ -16,7 +11,6 @@ import (
 type dollars float32
 
 func (d dollars) String() string { return fmt.Sprintf("$%.2f", d) }
-
 
 func main() {
 	db := database{"shoes": 50, "socks": 5}
@@ -44,7 +38,6 @@ func (db database) price(w http.ResponseWriter, req *http.Request) {
 	}
 	fmt.Fprintf(w, "%s\n", price)
 }
-
 
 /*
 package http

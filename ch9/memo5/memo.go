@@ -1,14 +1,8 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 278.
-
 // Package memo provides a concurrency-safe non-blocking memoization
 // of a function.  Requests for different keys proceed in parallel.
 // Concurrent requests for the same key block until the first completes.
 // This implementation uses a monitor goroutine.
 package memo
-
 
 // Func is the type of the function to memoize.
 type Func func(key string) (interface{}, error)
@@ -23,8 +17,6 @@ type entry struct {
 	res   result
 	ready chan struct{} // closed when res is ready
 }
-
-
 
 // A request is a message requesting that the Func be applied to key.
 type request struct {
@@ -49,8 +41,6 @@ func (memo *Memo) Get(key string) (interface{}, error) {
 }
 
 func (memo *Memo) Close() { close(memo.requests) }
-
-
 
 func (memo *Memo) server(f Func) {
 	cache := make(map[string]*entry)
@@ -79,4 +69,3 @@ func (e *entry) deliver(response chan<- result) {
 	// Send the result to the client.
 	response <- e.res
 }
-

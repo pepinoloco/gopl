@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 250.
-
 // The du3 command computes the disk usage of the files in a directory.
 package main
 
@@ -69,7 +64,6 @@ loop:
 	// ...select loop...
 }
 
-
 func printDiskUsage(nfiles, nbytes int64) {
 	fmt.Printf("%d files  %.1f GB\n", nfiles, float64(nbytes)/1e9)
 }
@@ -88,7 +82,6 @@ func walkDir(dir string, n *sync.WaitGroup, fileSizes chan<- int64) {
 		}
 	}
 }
-
 
 // sema is a counting semaphore for limiting concurrency in dirents.
 var sema = make(chan struct{}, 20)

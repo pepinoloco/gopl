@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 117.
-
 // Autoescape demonstrates automatic HTML escaping in html/template.
 package main
 
@@ -25,4 +20,3 @@ func main() {
 		log.Fatal(err)
 	}
 }
-

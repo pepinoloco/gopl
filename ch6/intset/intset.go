@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 165.
-
 // Package intset provides a set of integers based on a bit vector.
 package intset
 
@@ -10,7 +5,6 @@ import (
 	"bytes"
 	"fmt"
 )
-
 
 // An IntSet is a set of small non-negative integers.
 // Its zero value represents the empty set.
@@ -44,8 +38,6 @@ func (s *IntSet) UnionWith(t *IntSet) {
 	}
 }
 
-
-
 // String returns the set as a string of the form "{1 2 3}".
 func (s *IntSet) String() string {
 	var buf bytes.Buffer
@@ -66,4 +58,3 @@ func (s *IntSet) String() string {
 	buf.WriteByte('}')
 	return buf.String()
 }
-

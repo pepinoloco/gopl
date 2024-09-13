@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 123.
-
 // Outline prints the outline of an HTML document tree.
 package main
 
@@ -31,4 +26,3 @@ func outline(stack []string, n *html.Node) {
 		outline(stack, c)
 	}
 }
-

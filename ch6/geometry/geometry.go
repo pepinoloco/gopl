@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 156.
-
 // Package geometry defines simple types for plane geometry.
 package geometry
 
@@ -20,8 +15,6 @@ func (p Point) Distance(q Point) float64 {
 	return math.Hypot(q.X-p.X, q.Y-p.Y)
 }
 
-
-
 // A Path is a journey connecting the points with straight lines.
 type Path []Point
 
@@ -35,4 +28,3 @@ func (path Path) Distance() float64 {
 	}
 	return sum
 }
-

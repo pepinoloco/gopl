@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 88.
-
 // Append illustrates the behavior of the built-in append function.
 package main
 
@@ -48,7 +43,6 @@ func appendInt(x []int, y int) []int {
 	return z
 }
 
-
 func main() {
 	var x, y []int
 	for i := 0; i < 10; i++ {
@@ -57,7 +51,6 @@ func main() {
 		x = y
 	}
 }
-
 
 /*
 0  cap=1   [0]

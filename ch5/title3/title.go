@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 153.
-
 // Title3 prints the title of an HTML document specified by a URL.
 package main
 
@@ -60,7 +55,6 @@ func soleTitle(doc *html.Node) (title string, err error) {
 	}
 	return title, nil
 }
-
 
 func title(url string) error {
 	resp, err := http.Get(url)

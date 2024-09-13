@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 261.
-
 // Package bank provides a concurrency-safe bank with one account.
 package bank
 
@@ -26,4 +21,3 @@ func teller() {
 func init() {
 	go teller() // start the monitor goroutine
 }
-

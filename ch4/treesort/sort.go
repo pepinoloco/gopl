@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 101.
-
 // Package treesort provides insertion sort using an unbalanced binary tree.
 package treesort
 
@@ -45,4 +40,3 @@ func add(t *tree, value int) *tree {
 	}
 	return t
 }
-

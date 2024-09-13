@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 359.
-
 // Package equal provides a deep equivalence relation for arbitrary values.
 package equal
 
@@ -96,7 +91,6 @@ func equal(x, y reflect.Value, seen map[comparison]bool) bool {
 	panic("unreachable")
 }
 
-
 // Equal reports whether x and y are deeply equal.
 //
 // Map keys are always compared with ==, not deeply.
@@ -110,4 +104,3 @@ type comparison struct {
 	x, y unsafe.Pointer
 	t    reflect.Type
 }
-

@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 223.
-
 // Reverb1 is a TCP server that simulates an echo.
 package main
 
@@ -31,7 +26,6 @@ func handleConn(c net.Conn) {
 	// NOTE: ignoring potential errors from input.Err()
 	c.Close()
 }
-
 
 func main() {
 	l, err := net.Listen("tcp", "localhost:8000")

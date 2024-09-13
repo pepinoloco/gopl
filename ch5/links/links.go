@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 138.
-
 // Package links provides a link-extraction function.
 package links
 
@@ -49,7 +44,6 @@ func Extract(url string) ([]string, error) {
 	forEachNode(doc, visitNode, nil)
 	return links, nil
 }
-
 
 // Copied from gopl/ch5/outline2.
 func forEachNode(n *html.Node, pre, post func(n *html.Node)) {

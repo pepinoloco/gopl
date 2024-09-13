@@ -1,6 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
 package word
 
 import "testing"
@@ -20,7 +17,6 @@ func TestNonPalindrome(t *testing.T) {
 	}
 }
 
-
 // The tests below are expected to fail.
 // See package gopl/ch11/word2 for the fix.
 
@@ -36,4 +32,3 @@ func TestCanalPalindrome(t *testing.T) {
 		t.Errorf(`IsPalindrome(%q) = false`, input)
 	}
 }
-

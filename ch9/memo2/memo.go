@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 275.
-
 // Package memo provides a concurrency-safe memoization a function of
 // type Func.  Concurrent requests are serialized by a Mutex.
 package memo
@@ -21,7 +16,6 @@ func New(f Func) *Memo {
 	return &Memo{f: f, cache: make(map[string]result)}
 }
 
-
 type Memo struct {
 	f     Func
 	mu    sync.Mutex // guards cache
@@ -39,4 +33,3 @@ func (memo *Memo) Get(key string) (value interface{}, err error) {
 	memo.mu.Unlock()
 	return res.value, res.err
 }
-

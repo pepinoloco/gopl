@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 251.
-
 // The du4 command computes the disk usage of the files in a directory.
 package main
 
@@ -27,7 +22,6 @@ func cancelled() bool {
 		return false
 	}
 }
-
 
 func main() {
 	// Determine the initial directories.
@@ -102,7 +96,6 @@ func walkDir(dir string, n *sync.WaitGroup, fileSizes chan<- int64) {
 		}
 	}
 }
-
 
 var sema = make(chan struct{}, 20) // concurrency-limiting counting semaphore
 

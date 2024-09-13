@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 344.
-
 // Package sexpr provides a means for converting Go objects to and
 // from S-expressions.
 package sexpr
@@ -31,7 +26,6 @@ func Unmarshal(data []byte, out interface{}) (err error) {
 	return nil
 }
 
-
 type lexer struct {
 	scan  scanner.Scanner
 	token rune // the current token
@@ -46,7 +40,6 @@ func (lex *lexer) consume(want rune) {
 	}
 	lex.next()
 }
-
 
 // The read function is a decoder for a small subset of well-formed
 // S-expressions.  For brevity of our example, it takes many dubious
@@ -97,7 +90,6 @@ func read(lex *lexer, v reflect.Value) {
 	}
 	panic(fmt.Sprintf("unexpected token %q", lex.text()))
 }
-
 
 func readList(lex *lexer, v reflect.Value) {
 	switch v.Kind() {
@@ -151,4 +143,3 @@ func endList(lex *lexer) bool {
 	}
 	return false
 }
-

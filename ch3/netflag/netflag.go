@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 77.
-
 // Netflag demonstrates an integer type used as a bit field.
 package main
 
@@ -25,4 +20,3 @@ func main() {
 	fmt.Printf("%b %t\n", v, IsUp(v))   // "10010 false"
 	fmt.Printf("%b %t\n", v, IsCast(v)) // "10010 true"
 }
-

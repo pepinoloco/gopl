@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 145.
-
 // Title2 prints the title of an HTML document specified by a URL.
 // It uses defer to simplify closing the response body stream.
 package main
@@ -57,7 +52,6 @@ func title(url string) error {
 
 	return nil
 }
-
 
 func main() {
 	for _, arg := range os.Args[1:] {

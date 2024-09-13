@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 161.
-
 // Coloredpoint demonstrates struct embedding.
 package main
 
@@ -19,7 +14,6 @@ type ColoredPoint struct {
 	Point
 	Color color.RGBA
 }
-
 
 func (p Point) Distance(q Point) float64 {
 	dX := q.X - p.X

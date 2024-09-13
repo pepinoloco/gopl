@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 219.
-
 // Clock1 is a TCP server that periodically writes the time.
 package main
 
@@ -38,4 +33,3 @@ func handleConn(c net.Conn) {
 		time.Sleep(1 * time.Second)
 	}
 }
-

@@ -1,8 +1,3 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 144.
-
 // Title1 prints the title of an HTML document specified by a URL.
 package main
 
@@ -67,7 +62,6 @@ func title(url string) error {
 	forEachNode(doc, visitNode, nil)
 	return nil
 }
-
 
 func main() {
 	for _, arg := range os.Args[1:] {
