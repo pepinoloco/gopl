@@ -8,16 +8,16 @@ func Deposit(amount int) { deposits <- amount }
 func Balance() int       { return <-balances }
 
 func teller() {
-	var balance int // balance is confined to teller goroutine
-	for {
-		select {
-		case amount := <-deposits:
-			balance += amount
-		case balances <- balance:
-		}
-	}
+    var balance int // balance is confined to teller goroutine
+    for {
+        select {
+        case amount := <-deposits:
+            balance += amount
+        case balances <- balance:
+        }
+    }
 }
 
 func init() {
-	go teller() // start the monitor goroutine
+    go teller() // start the monitor goroutine
 }

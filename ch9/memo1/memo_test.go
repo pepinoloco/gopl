@@ -1,23 +1,23 @@
 package memo_test
 
 import (
-	"testing"
+    "testing"
 
-	"gopl/ch9/memo1"
-	"gopl/ch9/memotest"
+    "gopl/ch9/memo1"
+    "gopl/ch9/memotest"
 )
 
 var httpGetBody = memotest.HTTPGetBody
 
 func Test(t *testing.T) {
-	m := memo.New(httpGetBody)
-	memotest.Sequential(t, m)
+    m := memo.New(httpGetBody)
+    memotest.Sequential(t, m)
 }
 
 // NOTE: not concurrency-safe!  Test fails.
 func TestConcurrent(t *testing.T) {
-	m := memo.New(httpGetBody)
-	memotest.Concurrent(t, m)
+    m := memo.New(httpGetBody)
+    memotest.Concurrent(t, m)
 }
 
 /*
@@ -34,7 +34,7 @@ https://play.golang.org, 205ns, 5767 bytes
 http://gopl, 326ns, 2856 bytes
 --- PASS: Test (1.21s)
 PASS
-ok  gopl/ch9/memo1	1.257s
+ok  gopl/ch9/memo1    1.257s
 */
 
 /*
@@ -56,5 +56,5 @@ Previous write by goroutine 35:
       ~/gobook2/src/gopl/ch9/memo1/memo.go:32 +0x205
 ...
 Found 1 data race(s)
-FAIL	gopl/ch9/memo1	2.393s
+FAIL    gopl/ch9/memo1    2.393s
 */

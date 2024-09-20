@@ -10,31 +10,31 @@
 //
 // Run with:
 //
-//	$ go run $GOPATH/src/gopl/ch8/thumbnail/main.go
-//	foo.jpeg
-//	^D
+//    $ go run $GOPATH/src/gopl/ch8/thumbnail/main.go
+//    foo.jpeg
+//    ^D
 package main
 
 import (
-	"bufio"
-	"fmt"
-	"log"
-	"os"
+    "bufio"
+    "fmt"
+    "log"
+    "os"
 
-	"gopl/ch8/thumbnail"
+    "gopl/ch8/thumbnail"
 )
 
 func main() {
-	input := bufio.NewScanner(os.Stdin)
-	for input.Scan() {
-		thumb, err := thumbnail.ImageFile(input.Text())
-		if err != nil {
-			log.Print(err)
-			continue
-		}
-		fmt.Println(thumb)
-	}
-	if err := input.Err(); err != nil {
-		log.Fatal(err)
-	}
+    input := bufio.NewScanner(os.Stdin)
+    for input.Scan() {
+        thumb, err := thumbnail.ImageFile(input.Text())
+        if err != nil {
+            log.Print(err)
+            continue
+        }
+        fmt.Println(thumb)
+    }
+    if err := input.Err(); err != nil {
+        log.Fatal(err)
+    }
 }

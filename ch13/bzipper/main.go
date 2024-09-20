@@ -2,19 +2,19 @@
 package main
 
 import (
-	"io"
-	"log"
-	"os"
+    "io"
+    "log"
+    "os"
 
-	"gopl/ch13/bzip"
+    "gopl/ch13/bzip"
 )
 
 func main() {
-	w := bzip.NewWriter(os.Stdout)
-	if _, err := io.Copy(w, os.Stdin); err != nil {
-		log.Fatalf("bzipper: %v\n", err)
-	}
-	if err := w.Close(); err != nil {
-		log.Fatalf("bzipper: close: %v\n", err)
-	}
+    w := bzip.NewWriter(os.Stdout)
+    if _, err := io.Copy(w, os.Stdin); err != nil {
+        log.Fatalf("bzipper: %v\n", err)
+    }
+    if err := w.Close(); err != nil {
+        log.Fatalf("bzipper: close: %v\n", err)
+    }
 }

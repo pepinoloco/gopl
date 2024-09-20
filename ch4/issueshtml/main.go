@@ -2,10 +2,10 @@
 package main
 
 import (
-	"log"
-	"os"
+    "log"
+    "os"
 
-	"gopl/ch4/github"
+    "gopl/ch4/github"
 )
 
 import "html/template"
@@ -31,11 +31,11 @@ var issueList = template.Must(template.New("issuelist").Parse(`
 `))
 
 func main() {
-	result, err := github.SearchIssues(os.Args[1:])
-	if err != nil {
-		log.Fatal(err)
-	}
-	if err := issueList.Execute(os.Stdout, result); err != nil {
-		log.Fatal(err)
-	}
+    result, err := github.SearchIssues(os.Args[1:])
+    if err != nil {
+        log.Fatal(err)
+    }
+    if err := issueList.Execute(os.Stdout, result); err != nil {
+        log.Fatal(err)
+    }
 }

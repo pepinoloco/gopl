@@ -2,40 +2,40 @@
 package main
 
 import (
-	"fmt"
-	"os"
-	"runtime"
+    "fmt"
+    "os"
+    "runtime"
 )
 
 func main() {
-	defer printStack()
-	f(3)
+    defer printStack()
+    f(3)
 }
 
 func printStack() {
-	var buf [4096]byte
-	n := runtime.Stack(buf[:], false)
-	os.Stdout.Write(buf[:n])
+    var buf [4096]byte
+    n := runtime.Stack(buf[:], false)
+    os.Stdout.Write(buf[:n])
 }
 
 func f(x int) {
-	fmt.Printf("f(%d)\n", x+0/x) // panics if x == 0
-	defer fmt.Printf("defer %d\n", x)
-	f(x - 1)
+    fmt.Printf("f(%d)\n", x+0/x) // panics if x == 0
+    defer fmt.Printf("defer %d\n", x)
+    f(x - 1)
 }
 
 /*
 goroutine 1 [running]:
 main.printStack()
-	src/gopl/ch5/defer2/defer.go:20
+    src/gopl/ch5/defer2/defer.go:20
 main.f(0)
-	src/gopl/ch5/defer2/defer.go:27
+    src/gopl/ch5/defer2/defer.go:27
 main.f(1)
-	src/gopl/ch5/defer2/defer.go:29
+    src/gopl/ch5/defer2/defer.go:29
 main.f(2)
-	src/gopl/ch5/defer2/defer.go:29
+    src/gopl/ch5/defer2/defer.go:29
 main.f(3)
-	src/gopl/ch5/defer2/defer.go:29
+    src/gopl/ch5/defer2/defer.go:29
 main.main()
-	src/gopl/ch5/defer2/defer.go:15
+    src/gopl/ch5/defer2/defer.go:15
 */
